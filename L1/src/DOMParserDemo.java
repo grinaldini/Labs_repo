@@ -24,7 +24,7 @@ public class DOMParserDemo {
             DocumentBuilder builder = factory.newDocumentBuilder();
 //Load and Parse the XML document
 //document contains the complete XML as a Tree
-            File relative = Paths.get(".","src","dblp-soc-papers.xml").normalize().toFile();
+            File relative = Paths.get(".","", "dblp-soc-papers.xml").normalize().toFile();
             Document document = builder.parse(relative); //Iterating through the nodes and extracting the data
             NodeList nodeList = document.getDocumentElement().getChildNodes();
             List<Paper> paperList = new ArrayList<Paper>();
@@ -57,6 +57,7 @@ public class DOMParserDemo {
                         }
                     }
                     paperList.add(paper);
+                    System.out.println(paper);
                 //remove this if statement so all data updates
 //                if(i==7){
 //                    break;
@@ -89,6 +90,7 @@ public class DOMParserDemo {
                     int index = 0;
                     for(Paper p : paperList){
                         PreparedStatement cmd = conn.prepareStatement(query);
+
                         cmd.setString(1, p.inproceedings);
                         //what can we use instead of json? the goal is to have all names inside author column, make sense?
                         //author1 || author2 ||
@@ -100,8 +102,10 @@ public class DOMParserDemo {
                             ii++;
                         }
                         String strAuthor = String.join("||", arr);
+
                         cmd.setObject(2, strAuthor);
                         cmd.setString(3, p.title);
+                        //System.out.println(p.title);
                         cmd.setString(4, p.pages);
                         cmd.setString(5, p.year);
                         cmd.setString(6, p.crossref);
@@ -109,8 +113,8 @@ public class DOMParserDemo {
                         cmd.setString(8, p.url);
                         index++;
                         cmd.addBatch();
-                        if(index%100 == 0 || index == paperList.size())
-                            cmd.executeBatch();
+                        cmd.executeBatch();
+                        System.out.println(cmd);
                     }
                     System.out.println("End");
                     conn.close();

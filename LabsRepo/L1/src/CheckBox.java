@@ -22,7 +22,7 @@ public class CheckBox extends JFrame implements ActionListener{
                tf7,tf8;
     JButton b;
     CheckBox(){
-        l=new JLabel("Title");
+        l=new JLabel("Lab 1");
         l.setBounds(50,50,300,20);
         cb1=new JCheckBox("1.3.1");
         cb1.setBounds(100,100,150,20);

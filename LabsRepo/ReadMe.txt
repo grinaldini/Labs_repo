@@ -1,8 +1,12 @@
 Project structure:
-1.We use jave SDK 16.0.2.
+1.We use java SDK 16.0.2.
 2.We have module named LabsRepo
 3.We got jline-2.14.6 and mysql-connector-java-8.0.16 in Libraries.
 
+Project set-up:
++ From the IntelliJ main menu, select File | Open. Also can click open on the welcome screen.
++ Then select the projects \LabsRepo\L1\maven\pom.xml file, next click OK.
++ In following dialogue click Open as Project, so that IntelliJ syncs.
 
 You should run CheckBox.java to test.
 1.CheckBox.java:(path:LabsRepo\L1\src\CheckBox.java)

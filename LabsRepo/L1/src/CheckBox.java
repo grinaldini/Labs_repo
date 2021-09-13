@@ -22,53 +22,62 @@ public class CheckBox extends JFrame implements ActionListener{
                tf7,tf8;
     JButton b;
     CheckBox(){
-        l=new JLabel("Lab 1");
+        l=new JLabel("Title");
         l.setBounds(50,50,300,20);
+
         cb1=new JCheckBox("1.3.1");
         cb1.setBounds(100,100,150,20);
         cb1.setToolTipText("Please enter author name, it will list all of his/her co-authors.");
         tf1=new JTextField("text field");
         tf1.setBounds(250,100,150,20);
+
         cb2=new JCheckBox("1.3.2");
         cb2.setBounds(100,150,150,20);
         cb2.setToolTipText("Please enter paper name, it will list all data of this paper.");
         tf2=new JTextField("text field");
         tf2.setBounds(250,150,150,20);
-        cb3=new JCheckBox("2.1");
-        cb3.setBounds(100,200,150,20);
-        cb3.setToolTipText("It will display all the article titles published in the area of SOSE.");
-        tf3=new JTextField("SOSE Title's");
-        tf3.setBounds(250,200,150,20);
-        tf3.setEditable(false);
-        cb4=new JCheckBox("2.2");
-        cb4.setBounds(100,250,150,20);
-        cb4.setToolTipText("Please enter author name and year, it will display the titles of the articles published by this author in the specific year.");
-        tf4=new JTextField("text field");
-        tf4.setBounds(250,250,75,20);
-        tf42=new JTextField("text field");
-        tf42.setBounds(325,250,75,20);
+
         cb5=new JCheckBox("1.3.3");
-        cb5.setBounds(100,300,150,20);
+        cb5.setBounds(100,200,150,20);
         cb5.setToolTipText("Please enter a journal name, volume and number, it will display all the papers published in this book.");
         tf51=new JTextField("Journal name");
-        tf51.setBounds(250,300,75,20);
+        tf51.setBounds(250,200,75,20);
         tf52=new JTextField("Volume");
-        tf52.setBounds(325,300,75,20);
+        tf52.setBounds(325,200,75,20);
         tf53=new JTextField("Number");
-        tf53.setBounds(400,300,75,20);
+        tf53.setBounds(400,200,75,20);
+
         cb6=new JCheckBox("1.3.4");
-        cb6.setBounds(100,350,150,20);
+        cb6.setBounds(100,250,150,20);
         cb6.setToolTipText("Please enter a conference name and year, it will display all the papers published in this book.");
         tf61=new JTextField("Booktitle");
-        tf61.setBounds(250,350,75,20);
+        tf61.setBounds(250,250,75,20);
         tf62=new JTextField("Year");
-        tf62.setBounds(325,350,75,20);
+        tf62.setBounds(325,250,75,20);
+
+        cb3=new JCheckBox("2.1");
+        cb3.setBounds(100,300,150,20);
+        cb3.setToolTipText("It will display all the article titles published in the area of SOSE.");
+        tf3=new JTextField("SOSE Title's");
+        tf3.setBounds(250,300,150,20);
+        tf3.setEditable(false);
+
+        cb4=new JCheckBox("2.2");
+        cb4.setBounds(100,350,150,20);
+        cb4.setToolTipText("Please enter author name and year, it will display the titles of the articles published by this author in the specific year.");
+        tf4=new JTextField("text field");
+        tf4.setBounds(250,350,75,20);
+        tf42=new JTextField("text field");
+        tf42.setBounds(325,350,75,20);
+
+
         cb7=new JCheckBox("2.3");
         cb7.setBounds(100,400,150,20);
         cb7.setToolTipText("It will display all the authors who have published 10 or more papers in the area of SOSE.");
         tf7=new JTextField("Authors papers over 10");
         tf7.setBounds(250,400,150,20);
         tf7.setEditable(false);
+
         cb8=new JCheckBox("2.4");
         cb8.setBounds(100,450,150,20);
         cb8.setToolTipText("Please enter a paper name, it will list all data of this paper.");
@@ -101,7 +110,7 @@ public class CheckBox extends JFrame implements ActionListener{
             if (conn != null) {
                 System.out.println("Connected to the database!");
 
-                String query = " select author from sys.lab1tbl where author like  \"%" + par  + "%\"";
+                String query = " select author from lab1tbl where author like  \"%" + par  + "%\"";
 
                 PreparedStatement stmt = conn.prepareStatement(query);
 
@@ -117,10 +126,6 @@ public class CheckBox extends JFrame implements ActionListener{
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
 
         return msg;
     }
@@ -172,12 +177,115 @@ public class CheckBox extends JFrame implements ActionListener{
             e.printStackTrace();
         }
 
-
-
-
-
         return msg;
     }
+
+    //Given journal name, volume, number, find out metadata of all papers in this book.
+    public String func133(String jname, String volume, String number){
+        String msg="";
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/lab1", "root", "201269")) {
+            if (conn != null) {
+                System.out.println("Connected to the database!");
+
+                String query = " select * from lab1.lab1tbl where journal like \"%" + jname + "%\""
+                        +"and journalVolume like \"%"+ volume +"%\""
+                        +"and journalNumber like \"%"+ number +"%\"";
+                //select information using the given journal name, volume and number.
+
+                PreparedStatement stmt = conn.prepareStatement(query);
+
+                ResultSet rs = stmt.executeQuery(query);
+                //put all the metadata in the msg string and make sure they will be shown on the window.
+                while (rs.next()){
+                    msg += "+ Inproceedings:  ";
+                    msg += rs.getString("inproceedings");
+                    msg += ";\n";
+                    msg += "   Author:  ";
+                    msg += rs.getString("author");
+                    msg += ";\n";
+                    msg += "   Title:  ";
+                    msg += rs.getString("title");
+                    msg += ";\n";
+                    msg += "   Pages:  ";
+                    msg += rs.getString("pages");
+                    msg += ";\n";
+                    msg += "   Year:  ";
+                    msg += rs.getString("year");
+                    msg += ";\n";
+                    msg += "   Journal:  ";
+                    msg += rs.getString("journal");
+                    msg += ";\n";
+                    msg += "   Journal volume:  ";
+                    msg += rs.getString("journalVolume");
+                    msg += ";\n";
+                    msg += "   Journal number:  ";
+                    msg += rs.getString("journalNumber");
+                    msg += ";\n";
+                    msg += "   URL:  ";
+                    msg += rs.getString("url");
+                    msg += ";\n"+"\n";
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return msg;
+    }
+
+    //Given conference name and year, find out metadata of all papers in this book.
+    public String func134(String btitle, String yr){
+        String msg="";
+        try (Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/lab1", "root", "201269")) {
+            if (conn != null) {
+                System.out.println("Connected to the database!");
+
+                String query = " select * from lab1.lab1tbl where booktitle like \"%" + btitle + "%\""
+                        +"and year like \"%"+ yr +"%\"";
+
+                PreparedStatement stmt = conn.prepareStatement(query);
+
+                ResultSet rs = stmt.executeQuery(query);
+                while (rs.next()){
+                    msg += "+ Inproceedings:  ";
+                    msg += rs.getString("inproceedings");
+                    msg += ";\n";
+                    msg += "   Author:  ";
+                    msg += rs.getString("author");
+                    msg += ";\n";
+                    msg += "   Title:  ";
+                    msg += rs.getString("title");
+                    msg += ";\n";
+                    msg += "   Pages:  ";
+                    msg += rs.getString("pages");
+                    msg += ";\n";
+                    msg += "   Year:  ";
+                    msg += rs.getString("year");
+                    msg += ";\n";
+                    msg += "   Crossref:  ";
+                    msg += rs.getString("crossref");
+                    msg += ";\n";
+                    msg += "   Booktitle:  ";
+                    msg += rs.getString("journalVolume");
+                    msg += ";\n";
+                    msg += "   URL:  ";
+                    msg += rs.getString("url");
+                    msg += ";\n"+"\n";
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return msg;
+    }
+
 
     //***************************************using xquery***********************************************************
     //+Display all the articles title in the area of SOSE(Contain "Service Oriented" in title)
@@ -235,114 +343,7 @@ public class CheckBox extends JFrame implements ActionListener{
         return msg;
     }
 
-    //Given journal name, volume, number, find out metadata of all papers in this book.
-    public String func133(String jname, String volume, String number){
-        String msg="";
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/lab1", "root", "201269")) {
-            if (conn != null) {
-                System.out.println("Connected to the database!");
-
-                String query = " select * from lab1.lab1tbl where journal like \"%" + jname + "%\""
-                               +"and journalVolume like \"%"+ volume +"%\""
-                               +"and journalNumber like \"%"+ number +"%\"";
-                //select information using the given journal name, volume and number.
-
-                PreparedStatement stmt = conn.prepareStatement(query);
-
-                ResultSet rs = stmt.executeQuery(query);
-                //put all the metadata in the msg string and make sure they will be shown on the window.
-                while (rs.next()){
-                    msg += "+ Inproceedings:  ";
-                    msg += rs.getString("inproceedings");
-                    msg += ";\n";
-                    msg += "   Author:  ";
-                    msg += rs.getString("author");
-                    msg += ";\n";
-                    msg += "   Title:  ";
-                    msg += rs.getString("title");
-                    msg += ";\n";
-                    msg += "   Pages:  ";
-                    msg += rs.getString("pages");
-                    msg += ";\n";
-                    msg += "   Year:  ";
-                    msg += rs.getString("year");
-                    msg += ";\n";
-                    msg += "   Journal:  ";
-                    msg += rs.getString("journal");
-                    msg += ";\n";
-                    msg += "   Journal volume:  ";
-                    msg += rs.getString("journalVolume");
-                    msg += ";\n";
-                    msg += "   Journal number:  ";
-                    msg += rs.getString("journalNumber");
-                    msg += ";\n";
-                    msg += "   URL:  ";
-                    msg += rs.getString("url");
-                    msg += ";\n"+"\n";
-                }
-            }
-
-        } catch (SQLException e) {
-            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return msg;
-    }
-
-    //Given conference name and year, find out metadata of all papers in this book.
-    public String func134(String btitle, String yr){
-        String msg="";
-        try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/lab1", "root", "201269")) {
-            if (conn != null) {
-                System.out.println("Connected to the database!");
-
-                String query = " select * from lab1.lab1tbl where booktitle like \"%" + btitle + "%\""
-                              +"and year like \"%"+ yr +"%\"";
-
-                PreparedStatement stmt = conn.prepareStatement(query);
-
-                ResultSet rs = stmt.executeQuery(query);
-                while (rs.next()){
-                    msg += "+ Inproceedings:  ";
-                    msg += rs.getString("inproceedings");
-                    msg += ";\n";
-                    msg += "   Author:  ";
-                    msg += rs.getString("author");
-                    msg += ";\n";
-                    msg += "   Title:  ";
-                    msg += rs.getString("title");
-                    msg += ";\n";
-                    msg += "   Pages:  ";
-                    msg += rs.getString("pages");
-                    msg += ";\n";
-                    msg += "   Year:  ";
-                    msg += rs.getString("year");
-                    msg += ";\n";
-                    msg += "   Crossref:  ";
-                    msg += rs.getString("crossref");
-                    msg += ";\n";
-                    msg += "   Booktitle:  ";
-                    msg += rs.getString("journalVolume");
-                    msg += ";\n";
-                    msg += "   URL:  ";
-                    msg += rs.getString("url");
-                    msg += ";\n"+"\n";
-                }
-            }
-
-        } catch (SQLException e) {
-            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return msg;
-    }
-
     //Display all the authors who have published more than 10 papers in the area of SOSE
-    //When paper is conference.
     public static String func23() throws Exception{
         String msg="";
         try (InputStream in = new FileInputStream("dblp-soc-papers.xml")) {
@@ -467,6 +468,28 @@ public class CheckBox extends JFrame implements ActionListener{
             //amount+=30;
             msg+="\n---------------------\n";
         }
+        if(cb5.isSelected()){
+            par = tf51.getText();
+            par2 = tf52.getText();
+            par3 = tf53.getText();
+            msg+="\n-------Query 1.3.3-------\n";
+
+            msg += func133(par,par2,par3);
+
+            msg += "\n---------------------\n";
+        }
+        if(cb6.isSelected()){
+            par = tf61.getText();
+            par2 = tf62.getText();
+
+            msg+="\n-------Query 1.3.4-------\n";
+
+            msg += func134(par,par2);
+
+            msg += "\n---------------------\n";
+        }
+
+
         if(cb3.isSelected()){
             //par=tf3.getText();
             msg+="\n-------Query 2.1-------\n";
@@ -499,30 +522,6 @@ public class CheckBox extends JFrame implements ActionListener{
 
             msg += "\n---------------------\n";
         }
-
-        if(cb5.isSelected()){
-            par = tf51.getText();
-            par2 = tf52.getText();
-            par3 = tf53.getText();
-            msg+="\n-------Query 1.3.3-------\n";
-
-            msg += func133(par,par2,par3);
-
-            msg += "\n---------------------\n";
-        }
-
-        if(cb6.isSelected()){
-            par = tf61.getText();
-            par2 = tf62.getText();
-
-            msg+="\n-------Query 1.3.4-------\n";
-
-            msg += func134(par,par2);
-
-            msg += "\n---------------------\n";
-        }
-
-
         if(cb7.isSelected()){
             msg+="\n-------Query 2.3-------\n";
             try {
@@ -532,8 +531,6 @@ public class CheckBox extends JFrame implements ActionListener{
             }
             msg+="\n---------------------\n";
         }
-
-
         if(cb8.isSelected()){
             par=tf8.getText();
             msg+="\n-------Query 2.4-------\n";

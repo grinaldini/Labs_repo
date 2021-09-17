@@ -1,0 +1,28 @@
+[debug] [naha] Invalidating /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes/models/Lab2Tbl$1.class: stamp changed from lastModified(1631846626000) to lastModified(1631846731000)
+[debug] [naha] 
+[debug] [naha] Initial source changes: 
+[debug] [naha] 	removed:Set()
+[debug] [naha] 	added: Set()
+[debug] [naha] 	modified: Set()
+[debug] [naha] Invalidated products: Set()
+[debug] [naha] External API changes: API Changes: Set()
+[debug] [naha] Modified binary dependencies: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes/models/Lab2Tbl$1.class)
+[debug] [naha] Initial directly invalidated sources: Set()
+[debug] [naha] 
+[debug] [naha] Sources indirectly invalidated by:
+[debug] [naha] 	product: Set()
+[debug] [naha] 	binary dep: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/app/models/Lab2Tbl.java)
+[debug] [naha] 	external source: Set()
+[debug] All initially invalidated sources: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/app/models/Lab2Tbl.java)
+[debug] [naha] Initial set of included nodes: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/app/models/Lab2Tbl.java)
+[info] Compiling 1 Java source to /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes...
+[debug] Attempting to call com.sun.tools.javac.api.JavacTool@4a2ed50f directly...
+[debug] Java compilation took 0.186774078 s
+[debug] Java analysis took 0.048017112 s
+[debug] Java compile + analysis took 0.247417256 s
+[debug] [naha] New invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] Initial set of included nodes: Set()
+[debug] [naha] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()

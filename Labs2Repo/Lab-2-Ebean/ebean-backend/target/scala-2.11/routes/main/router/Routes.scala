@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/conf/routes
-// @DATE:Thu Sep 16 20:31:31 CDT 2021
+// @DATE:Sun Sep 19 11:49:46 CDT 2021
 
 package router
 
@@ -48,7 +48,7 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """find-conference-locations""", """controllers.ConferenceController.findConferenceLocations()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """find-conference-locations""", """controllers.ConferenceController.findConferenceLocations()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.UserController.authenticate()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.UserController.registerNew()"""),
     Nil
@@ -76,7 +76,7 @@ class Routes(
   )
 
   // @LINE:8
-  private[this] lazy val controllers_ConferenceController_findConferenceLocations1_route = Route("GET",
+  private[this] lazy val controllers_ConferenceController_findConferenceLocations1_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("find-conference-locations")))
   )
   private[this] lazy val controllers_ConferenceController_findConferenceLocations1_invoker = createInvoker(
@@ -86,7 +86,7 @@ class Routes(
       "controllers.ConferenceController",
       "findConferenceLocations",
       Nil,
-      "GET",
+      "POST",
       """""",
       this.prefix + """find-conference-locations"""
     )

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/conf/routes
-// @DATE:Tue Sep 14 18:01:19 CDT 2021
+// @DATE:Sun Sep 19 12:05:42 CDT 2021
 
 import play.api.mvc.Call
 
@@ -18,22 +18,22 @@ package controllers {
     }
 
   
-    // @LINE:12
-    def signupHandler(): Call = {
+    // @LINE:10
+    def locationRequestForm(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "register")
+      Call("GET", _prefix + { _defaultPrefix } + "conference-locations-form")
     }
   
-    // @LINE:10
+    // @LINE:11
+    def findConferenceLocations(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "conference-locations-list")
+    }
+  
+    // @LINE:13
     def signup(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "signup")
-    }
-  
-    // @LINE:7
-    def index(): Call = {
-      
-      Call("GET", _prefix)
     }
   
     // @LINE:8
@@ -42,16 +42,28 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
+    // @LINE:15
+    def signupHandler(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "register")
+    }
+  
+    // @LINE:7
+    def index(): Call = {
+      
+      Call("GET", _prefix)
+    }
+  
   }
 
-  // @LINE:15
+  // @LINE:18
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:15
+    // @LINE:18
     def at(file:String): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[String]].unbind("file", file))

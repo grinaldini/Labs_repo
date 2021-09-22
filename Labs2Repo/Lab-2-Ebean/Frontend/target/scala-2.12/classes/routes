@@ -7,6 +7,9 @@
 GET     /                           controllers.HomeController.index()
 GET     /login                      controllers.HomeController.loginHandler()
 
+GET    /conference-locations-form  controllers.HomeController.locationRequestForm()
+GET    /conference-locations-list  controllers.HomeController.findConferenceLocations()
+
 GET     /signup                     controllers.HomeController.signup()
 
 GET     /register                   controllers.HomeController.signupHandler()

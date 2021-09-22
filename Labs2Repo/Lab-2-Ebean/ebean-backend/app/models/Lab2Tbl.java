@@ -36,7 +36,7 @@ public class Lab2Tbl extends Model {
 
     public static Find<Long, Lab2Tbl> find = new Find<Long, Lab2Tbl>(){};
 
-    public static List findConferenceLocations(String booktitle, String year1, String year2) {
+    public static List<SqlRow> findConferenceLocations(String booktitle, String year1, String year2) {
         String sql= " select distinct location from ebeantest.lab2tbl"
                 + " where booktitle = :booktitle and year >= :year1 and year <= :year2";
        // String sql = "select id, name from customer where name like :name and status_code = :status";

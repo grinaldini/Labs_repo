@@ -1,0 +1,4 @@
+[error] /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/app/views/login.scala.html:36: Not parsed?
+[error]                             color: #4cc9f0;}">1.1</button>
+[error]                                            ^
+[error] (compile:twirlCompileTemplates) Twirl compilation failed

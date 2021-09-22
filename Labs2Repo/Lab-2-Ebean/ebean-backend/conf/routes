@@ -5,7 +5,7 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET     /find-conference-locations  controllers.ConferenceController.findConferenceLocations()
+POST    /find-conference-locations  controllers.ConferenceController.findConferenceLocations()
 #Login
 POST     /login                      controllers.UserController.authenticate()
 

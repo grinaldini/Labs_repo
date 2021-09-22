@@ -1,5 +1,6 @@
 package controllers;
 
+import com.avaje.ebean.SqlRow;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.Lab2Tbl;
@@ -23,8 +24,13 @@ public class ConferenceController extends Controller {
 
     public Result findConferenceLocations() {
 
+        JsonNode req = request().body().asJson();
+        String booktitle = req.get("booktitle").asText();
+        String yearFrom = req.get("yearFrom").asText();
+        String yearTo = req.get("yearTo").asText();
+
         try {
-            List <Lab2Tbl>rows = Lab2Tbl.findConferenceLocations("ICWS", "2007", "2010");
+            List<SqlRow> rows = Lab2Tbl.findConferenceLocations(booktitle, yearFrom, yearTo);
 
             return ok(Json.toJson(rows));
         }

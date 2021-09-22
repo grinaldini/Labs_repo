@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/conf/routes
-// @DATE:Tue Sep 14 18:01:19 CDT 2021
+// @DATE:Sun Sep 19 12:05:42 CDT 2021
 
 package controllers;
 

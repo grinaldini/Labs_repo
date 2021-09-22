@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/conf/routes
-// @DATE:Tue Sep 14 18:01:19 CDT 2021
+// @DATE:Sun Sep 19 12:05:42 CDT 2021
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,32 +19,32 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
-    def signupHandler: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.signupHandler",
+    // @LINE:10
+    def locationRequestForm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.locationRequestForm",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "conference-locations-form"})
         }
       """
     )
   
-    // @LINE:10
+    // @LINE:11
+    def findConferenceLocations: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.findConferenceLocations",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "conference-locations-list"})
+        }
+      """
+    )
+  
+    // @LINE:13
     def signup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.signup",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
-        }
-      """
-    )
-  
-    // @LINE:7
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
         }
       """
     )
@@ -59,9 +59,29 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:15
+    def signupHandler: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.signupHandler",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:15
+  // @LINE:18
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -69,7 +89,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:18
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

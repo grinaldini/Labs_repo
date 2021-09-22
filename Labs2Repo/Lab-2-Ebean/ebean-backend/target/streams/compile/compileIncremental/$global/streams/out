@@ -1,4 +1,4 @@
-[debug] [naha] Invalidating /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes/models/Lab2Tbl$1.class: stamp changed from lastModified(1631846626000) to lastModified(1631846731000)
+[debug] [naha] Invalidating /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes/models/Lab2Tbl$1.class: stamp changed from lastModified(1632067973000) to lastModified(1632070214000)
 [debug] [naha] 
 [debug] [naha] Initial source changes: 
 [debug] [naha] 	removed:Set()
@@ -16,10 +16,10 @@
 [debug] All initially invalidated sources: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/app/models/Lab2Tbl.java)
 [debug] [naha] Initial set of included nodes: Set(/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/app/models/Lab2Tbl.java)
 [info] Compiling 1 Java source to /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/target/scala-2.11/classes...
-[debug] Attempting to call com.sun.tools.javac.api.JavacTool@4a2ed50f directly...
-[debug] Java compilation took 0.186774078 s
-[debug] Java analysis took 0.048017112 s
-[debug] Java compile + analysis took 0.247417256 s
+[debug] Attempting to call com.sun.tools.javac.api.JavacTool@6bb2d8a6 directly...
+[debug] Java compilation took 0.186120802 s
+[debug] Java analysis took 0.079932406 s
+[debug] Java compile + analysis took 0.272560554 s
 [debug] [naha] New invalidations:
 [debug] [naha] 	Set()
 [debug] [naha] Initial set of included nodes: Set()

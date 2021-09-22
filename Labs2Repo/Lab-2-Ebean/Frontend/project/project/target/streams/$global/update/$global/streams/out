@@ -6009,7 +6009,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.7!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 3633ms :: artifacts dl 54ms
+[debug] :: resolution report :: resolve 4510ms :: artifacts dl 39ms
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT compile produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-compile.xml
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT runtime produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-runtime.xml
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT test produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-test.xml
@@ -6023,5 +6023,5 @@
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT docs produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-docs.xml
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT pom produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-pom.xml
 [debug] 	report for default#frontend-build-build;0.1-SNAPSHOT scala-tool produced in /Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/project/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-frontend-build-build-scala-tool.xml
-[debug] 	resolve done (3633ms resolve - 54ms download)
+[debug] 	resolve done (4510ms resolve - 39ms download)
 [info] Done updating.

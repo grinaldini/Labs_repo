@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/conf/routes
-// @DATE:Thu Sep 16 20:31:31 CDT 2021
+// @DATE:Sun Sep 19 11:49:46 CDT 2021
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -23,7 +23,7 @@ package controllers {
     // @LINE:8
     def findConferenceLocations(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "find-conference-locations")
+      Call("POST", _prefix + { _defaultPrefix } + "find-conference-locations")
     }
   
   }

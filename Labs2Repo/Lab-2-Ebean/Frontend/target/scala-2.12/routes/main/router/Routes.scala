@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/Frontend/conf/routes
-// @DATE:Tue Sep 14 18:01:19 CDT 2021
+// @DATE:Sun Sep 19 12:05:42 CDT 2021
 
 package router
 
@@ -16,7 +16,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:7
   HomeController_1: controllers.HomeController,
-  // @LINE:15
+  // @LINE:18
   Assets_0: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -25,7 +25,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:7
     HomeController_1: controllers.HomeController,
-    // @LINE:15
+    // @LINE:18
     Assets_0: controllers.Assets
   ) = this(errorHandler, HomeController_1, Assets_0, "/")
 
@@ -42,6 +42,8 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.loginHandler()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """conference-locations-form""", """controllers.HomeController.locationRequestForm()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """conference-locations-list""", """controllers.HomeController.findConferenceLocations()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signup()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.HomeController.signupHandler()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
@@ -89,10 +91,46 @@ class Routes(
   )
 
   // @LINE:10
-  private[this] lazy val controllers_HomeController_signup2_route = Route("GET",
+  private[this] lazy val controllers_HomeController_locationRequestForm2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("conference-locations-form")))
+  )
+  private[this] lazy val controllers_HomeController_locationRequestForm2_invoker = createInvoker(
+    HomeController_1.locationRequestForm(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "locationRequestForm",
+      Nil,
+      "GET",
+      this.prefix + """conference-locations-form""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:11
+  private[this] lazy val controllers_HomeController_findConferenceLocations3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("conference-locations-list")))
+  )
+  private[this] lazy val controllers_HomeController_findConferenceLocations3_invoker = createInvoker(
+    HomeController_1.findConferenceLocations(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "findConferenceLocations",
+      Nil,
+      "GET",
+      this.prefix + """conference-locations-list""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:13
+  private[this] lazy val controllers_HomeController_signup4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
-  private[this] lazy val controllers_HomeController_signup2_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_signup4_invoker = createInvoker(
     HomeController_1.signup(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -106,11 +144,11 @@ class Routes(
     )
   )
 
-  // @LINE:12
-  private[this] lazy val controllers_HomeController_signupHandler3_route = Route("GET",
+  // @LINE:15
+  private[this] lazy val controllers_HomeController_signupHandler5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
   )
-  private[this] lazy val controllers_HomeController_signupHandler3_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_signupHandler5_invoker = createInvoker(
     HomeController_1.signupHandler(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -124,11 +162,11 @@ class Routes(
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_Assets_at4_route = Route("GET",
+  // @LINE:18
+  private[this] lazy val controllers_Assets_at6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at4_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at6_invoker = createInvoker(
     Assets_0.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -158,21 +196,33 @@ class Routes(
       }
   
     // @LINE:10
-    case controllers_HomeController_signup2_route(params@_) =>
+    case controllers_HomeController_locationRequestForm2_route(params@_) =>
       call { 
-        controllers_HomeController_signup2_invoker.call(HomeController_1.signup())
+        controllers_HomeController_locationRequestForm2_invoker.call(HomeController_1.locationRequestForm())
       }
   
-    // @LINE:12
-    case controllers_HomeController_signupHandler3_route(params@_) =>
+    // @LINE:11
+    case controllers_HomeController_findConferenceLocations3_route(params@_) =>
       call { 
-        controllers_HomeController_signupHandler3_invoker.call(HomeController_1.signupHandler())
+        controllers_HomeController_findConferenceLocations3_invoker.call(HomeController_1.findConferenceLocations())
+      }
+  
+    // @LINE:13
+    case controllers_HomeController_signup4_route(params@_) =>
+      call { 
+        controllers_HomeController_signup4_invoker.call(HomeController_1.signup())
       }
   
     // @LINE:15
-    case controllers_Assets_at4_route(params@_) =>
+    case controllers_HomeController_signupHandler5_route(params@_) =>
+      call { 
+        controllers_HomeController_signupHandler5_invoker.call(HomeController_1.signupHandler())
+      }
+  
+    // @LINE:18
+    case controllers_Assets_at6_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at4_invoker.call(Assets_0.at(path, file))
+        controllers_Assets_at6_invoker.call(Assets_0.at(path, file))
       }
   }
 }

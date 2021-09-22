@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/gian9898/Documents/sandbox/dev/cs7340_repo/git_labs_repo/Labs_repo/Labs2Repo/Lab-2-Ebean/ebean-backend/conf/routes
-// @DATE:Thu Sep 16 20:31:31 CDT 2021
+// @DATE:Sun Sep 19 11:49:46 CDT 2021
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -28,7 +28,7 @@ package controllers.javascript {
       "controllers.ConferenceController.findConferenceLocations",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "find-conference-locations"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "find-conference-locations"})
         }
       """
     )

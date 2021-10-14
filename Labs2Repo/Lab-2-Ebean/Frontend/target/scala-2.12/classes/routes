@@ -7,6 +7,31 @@
 GET     /                           controllers.HomeController.index()
 GET     /login                      controllers.HomeController.loginHandler()
 
+#1.1
+GET    /title-blank                controllers.HomeController.titleBlank()
+GET    /metadata-list              controllers.HomeController.outputMetadata()
+
+#1.2
+GET    /journal-form               controllers.HomeController.journalRequestForm()
+GET    /journal-metadata-list      controllers.HomeController.outputJournal()
+
+#1.3
+GET    /researcher-year-form       controllers.HomeController.researcherYearForm()
+GET    /title-list                 controllers.HomeController.outputTitle()
+
+#1.4
+GET    /minimum-number-blank       controllers.HomeController.minimumNumberBlank()
+GET    /authors-list               controllers.HomeController.outputAuthors()
+
+#2.1
+GET    /researcher-year-form-meta  controllers.HomeController.researcherYearFormMeta()
+GET    /researcher-article-list    controllers.HomeController.outputResearcherArticle()
+
+#2.2
+GET    /mini-number-blank-coauthor controllers.HomeController.miniNumberBlankForCoauthor()
+GET    /coauthor-list              controllers.HomeController.outputCoauthors()
+
+#1.5&2.3
 GET    /conference-locations-form  controllers.HomeController.locationRequestForm()
 GET    /conference-locations-list  controllers.HomeController.findConferenceLocations()
 

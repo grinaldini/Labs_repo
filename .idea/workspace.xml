@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c36ed456-6218-47fc-a10d-c5f789a57ef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/LabsRepo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L1/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L1/.idea/libraries/SaxonHE10_5J.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/doc/img/logo_crop-mid-blue-background.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/doc/img/saxonica_logo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/doc/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/doc/saxondocs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/jline-2.14.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/notices/JAMESCLARK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/notices/JLINE2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/notices/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/notices/THAI.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/notices/UNICODE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/saxon-he-10.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/saxon-he-test-10.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SaxonHE10-5J/saxon-xqj-10.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dblp-soc-papers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dump/Dump20210909/lab1_lab1tbl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/L1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L1/L1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/maven/maven.iml" beforeDir="false" afterPath="$PROJECT_DIR$/L1/maven/maven.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/maven/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L1/maven/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/CheckBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/L1/out/production/L1/CheckBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/DOMParserDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/L1/out/production/L1/DOMParserDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/JDBCConn.class" beforeDir="false" afterPath="$PROJECT_DIR$/L1/out/production/L1/JDBCConn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/L1/out/production/L1/Paper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/dblp-soc-papers copy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/dblp-soc-papers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/out/production/L1/dblp.dtd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/L1/src/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/DOMParserDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/L1/src/DOMParserDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/L1/src/Paper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/dblp-soc-papers copy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/dblp-soc-papers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L1/src/dblp.dtd" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XQuery Library Module" />
+        <option value="XQuery Main Module" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="1xYLzoG48W3TGtwKBXWTaJTZVHY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/SOSE Lab-2 Play Frontend-Backend/Backend" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="Application.CheckBox">
+    <configuration name="CheckBox" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-16.0.2" />
+      <option name="MAIN_CLASS_NAME" value="CheckBox" />
+      <module name="LabsRepo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DOMParserDemo" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-16.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="DOMParserDemo" />
+      <module name="LabsRepo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DOMParserDemo" />
+      <item itemvalue="Application.CheckBox" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CheckBox" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c36ed456-6218-47fc-a10d-c5f789a57ef1" name="Changes" comment="" />
+      <created>1630527341134</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630527341134</updated>
+      <workItem from="1630527343676" duration="673000" />
+      <workItem from="1630610171331" duration="1338000" />
+      <workItem from="1630612981326" duration="3726000" />
+      <workItem from="1630619346883" duration="1068000" />
+      <workItem from="1630684548679" duration="485000" />
+      <workItem from="1630686314726" duration="1165000" />
+      <workItem from="1630702287916" duration="610000" />
+      <workItem from="1630790168878" duration="365000" />
+      <workItem from="1630858949225" duration="617000" />
+      <workItem from="1630895176493" duration="2067000" />
+      <workItem from="1630897424648" duration="174000" />
+      <workItem from="1630897624803" duration="88000" />
+      <workItem from="1630897728021" duration="31000" />
+      <workItem from="1630970426503" duration="5388000" />
+      <workItem from="1630976545089" duration="4794000" />
+      <workItem from="1630984690629" duration="527000" />
+      <workItem from="1631121844823" duration="202000" />
+      <workItem from="1631122066352" duration="600000" />
+      <workItem from="1631127087782" duration="4555000" />
+      <workItem from="1631131820183" duration="19000" />
+      <workItem from="1631166917416" duration="823000" />
+      <workItem from="1631212517524" duration="1318000" />
+      <workItem from="1631213949384" duration="434000" />
+      <workItem from="1631214401012" duration="8569000" />
+      <workItem from="1631223046941" duration="2483000" />
+      <workItem from="1631227730370" duration="9404000" />
+      <workItem from="1631238202495" duration="3184000" />
+      <workItem from="1631241452775" duration="447000" />
+      <workItem from="1631241922986" duration="492000" />
+      <workItem from="1631242490715" duration="3498000" />
+      <workItem from="1631284255569" duration="9194000" />
+      <workItem from="1631298425377" duration="1784000" />
+      <workItem from="1631301052813" duration="4453000" />
+      <workItem from="1631327494104" duration="595000" />
+      <workItem from="1631340045895" duration="7520000" />
+      <workItem from="1631349807558" duration="336000" />
+      <workItem from="1631372409018" duration="31700000" />
+      <workItem from="1631424244362" duration="2469000" />
+      <workItem from="1631471582103" duration="11152000" />
+      <workItem from="1631496856169" duration="1319000" />
+      <workItem from="1631851599548" duration="656000" />
+      <workItem from="1631853630822" duration="32000" />
+      <workItem from="1631895128038" duration="503000" />
+      <workItem from="1631895655839" duration="618000" />
+      <workItem from="1631896934332" duration="76000" />
+      <workItem from="1631899490353" duration="1390000" />
+      <workItem from="1632026467193" duration="323000" />
+      <workItem from="1632642241131" duration="2998000" />
+      <workItem from="1632659718119" duration="2765000" />
+      <workItem from="1632704706023" duration="1386000" />
+      <workItem from="1633048856416" duration="298000" />
+      <workItem from="1633064979695" duration="1219000" />
+      <workItem from="1633075660625" duration="397000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="javax.xml.xquery.XQException" package="javax.xml.xquery" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

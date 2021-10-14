@@ -5,7 +5,24 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
+#1.1
+POST    /inPnameOutMetadata         controllers.Controller11.outputMetadata()
+
+#1.2
+POST    /journalMetadata            controllers.Controller12.output12()
+
+#1.3&2.1
+POST    /paperofResearcher          controllers.Controller1321.output1321()
+
+#1.4
+POST    /productiveResearcher       controllers.Controller14.output14()
+
+#2.2
+POST    /coautherOfPResearcher     controllers.Controller22.output22()
+
+#1.5&2.3
 POST    /find-conference-locations  controllers.ConferenceController.findConferenceLocations()
+
 #Login
 POST     /login                      controllers.UserController.authenticate()
 
